@@ -33,7 +33,7 @@ public class CustomerDAO {
 		int result = 0;
 		PreparedStatement pstmt = null;
 		String query = prop.getProperty("insertCustomer");
-		
+		Statement stmt = null;
 
 		pstmt = conn.prepareStatement(query);
 		pstmt.setString(1, customer.getCusId());
